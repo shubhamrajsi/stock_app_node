@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    
+  </head>
+  <body>
+      <h3>Stock details in depth</h3>
+        {{#each timeSeriesDailyJson}}
+       
+    
+        
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Open</th>
+                    <th>High</th>
+                    <th>Low</th>
+                    <th>Close</th>
+                </tr>
+                <tr>
+                    <td>{{date}}</td>
+                    {{#each value}}
+                    <td>{{{[1. open]}}}</td>
+                    <td>{{{[2. high]}}}</td>
+                    <td>{{{[3. low]}}}</td>
+                    <td>{{{[4. close]}}}</td>
+                    {{/each}} 
+                </tr>
+            </table>
+        {{/each}}
+        
+           
+    
+
+
+    
+
+
+    
+  </body>
+</html>
+
+
